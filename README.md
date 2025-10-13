@@ -111,11 +111,6 @@ Ausência de duplicatas
 
 Coerência temporal e geográfica
 
-</details>
-📊 Dashboard Power BI
-
-O dashboard Livros_BI.pbix permite análises interativas por canal, estado, categoria, motivo de devolução e período.
-
 <details> <summary><b>🧭 Conexão e Atualização de Dados</b></summary>
 
 Abra o arquivo parte_3_dashboard/Livros_BI.pbix.
