@@ -34,13 +34,14 @@
 
 ## 📁 Estrutura do Projeto
 
-
+```
 Livros_BI/
 ├── csv/ → Dados de origem (brutos)
 ├── parte_1_ddl/ → Scripts DDL (criação do banco e tabelas)
 ├── parte_2_etl/ → Scripts ETL (transformações e cargas)
 ├── parte_3_dashboard/ → Dashboard Power BI (.pbix)
 └── README.md
+```
 
 
 🧩 Modelagem de Dados
