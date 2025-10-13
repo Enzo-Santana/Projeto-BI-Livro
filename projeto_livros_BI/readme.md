@@ -1,5 +1,5 @@
 Estrutura do projeto 
-
+```
 teste_tecnico/
 └── projeto_livros_BI/
     ├── csv
@@ -32,7 +32,7 @@ teste_tecnico/
     │
     └── parte_5_questoes_objetivas/    # Respostas para questões teóricas
         └── respostas_objetivas.pdf
-
+```
 INFORMAÇÕES TÉCNICAS
 
 Item                    Detalhe
@@ -147,3 +147,4 @@ Exportar para as Planilhas
 Desenvolvedor: Enzo Santana
 Data de Entrega: 13/10/2025
 Versão: 1.0
+
