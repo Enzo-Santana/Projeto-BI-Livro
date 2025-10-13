@@ -35,12 +35,13 @@
 ## 📁 Estrutura do Projeto
 
 
-📂 Livros_BI
- ┣ 📂 csv/                  → Dados de origem (brutos)
- ┣ 📂 parte_1_ddl/          → Scripts DDL (criação do banco e tabelas)
- ┣ 📂 parte_2_etl/          → Scripts ETL (transformações e cargas)
- ┣ 📂 parte_3_dashboard/    → Dashboard Power BI (.pbix)
- ┗ 📄 README.md
+Livros_BI/
+├── csv/ → Dados de origem (brutos)
+├── parte_1_ddl/ → Scripts DDL (criação do banco e tabelas)
+├── parte_2_etl/ → Scripts ETL (transformações e cargas)
+├── parte_3_dashboard/ → Dashboard Power BI (.pbix)
+└── README.md
+
 
 🧩 Modelagem de Dados
 
@@ -48,21 +49,20 @@ A modelagem segue o padrão Star Schema, com granularidade no nível de item do 
 
 🌟 Estrutura Dimensional
 
-<p align="center"> <img src="https://imgur.com/a/wH1G2sP" alt="Modelagem"/> </p>
+| Campo             | Tipo          | Descrição                         |
+| ----------------- | ------------- | --------------------------------- |
+| fato_vendas_id    | INT (PK)      | Identificador único               |
+| dim_produto_id    | INT (FK)      | Referência da dimensão produto    |
+| dim_cliente_id    | INT (FK)      | Referência da dimensão cliente    |
+| dim_canal_id      | INT (FK)      | Referência da dimensão canal      |
+| dim_calendario_id | INT (FK)      | Referência da dimensão calendário |
+| dim_localidade_id | INT (FK)      | Referência da dimensão localidade |
+| order_id          | VARCHAR(20)   | ID do pedido original             |
+| quantidade        | INT           | Quantidade vendida                |
+| preco_unitario    | DECIMAL(10,2) | Valor unitário                    |
+| desconto_unitario | DECIMAL(10,2) | Desconto aplicado                 |
+| receita_liquida   | DECIMAL(12,2) | Receita líquida final             |
 
-🔹 Tabela Fato — FATO_VENDAS
-Campo	                 Tipo	           Descrição
-fato_vendas_id (PK)	   INT	            Identificador único
-dim_produto_id (FK)	   INT	            Referência da dimensão produto
-dim_cliente_id (FK)	   INT	            Referência da dimensão cliente
-dim_canal_id (FK)	     INT	            Referência da dimensão canal
-dim_calendario_id (FK)	INT	            Referência da dimensão calendário
-dim_localidade_id (FK)	INT	            Referência da dimensão localidade
-order_id	              VARCHAR(20)	    ID do pedido original
-quantidade	            INT	            Quantidade vendida
-preco_unitario	        DECIMAL(10,2)	  Valor unitário
-desconto_unitario	     DECIMAL(10,2)	  Desconto aplicado
-receita_liquida	       DECIMAL(12,2)	  Receita líquida final
 <details> <summary><b>⚙️ Passo a Passo — Execução do Projeto (clique para expandir)</b></summary>
 🔧 1. Pré-requisitos
 
@@ -148,25 +148,28 @@ Clique em Atualizar (Refresh).
 
 🕓 Análises Temporais
 
-🖼️ Visual do Dashboard
-
-<p align="center"> <img src="https://imgur.com/a/wH1G2sP" alt="Dashboard Power BI - Livros BI"/> </p>
 🕒 Supostos de Agendamento (Produção)
-Etapa	Frequência	Responsável
-Carga CSV → Staging	Diário	Automação/ETL
-ETL → Dimensões/Fato	Diário	Scheduler
-Atualização Power BI	Diária (06h)	Gateway Power BI
-🚨 Solução de Problemas Comuns
+
+Etapa: Frequência
+Responsável: Carga CSV → Staging (Diário)
+
+Automação / ETL
+
+ETL → Dimensões/Fato: Diário
+
+Scheduler: Atualização Power BI Diária (06h)
+
+Gateway: Power BI
+
+Solução de Problemas Comuns
+
 Problema	Causa	Solução
 ERROR 1290 ao usar LOAD DATA	secure-file-priv restrito	Ajustar diretório permitido
 Power BI não conecta	Porta incorreta ou credenciais erradas	Verificar config. do MySQL
 Dados duplicados	Falha de PK/FK na fato	Revisar joins no ETL
-👨‍💻 Desenvolvedor
 
-Enzo Santana
-🎓 Ciência da Computação — UNASP-SP
+👨‍💻 Desenvolvedor: Enzo Santana
+🎓 Curso: Ciência da Computação — UNASP-SP
 📅 Data de Entrega: 13/10/2025
 🏷️ Versão: 1.0
-💼 Projeto Técnico — Business Intelligence (Livros BI)
-
-<p align="center"> ⭐ <b>Se este projeto te ajudou, deixe uma estrela!</b> ⭐ <br> <sub>Feito com dedicação por <b>Enzo Santana</b></sub> </p> ```
+💼 Projeto Técnico: Business Intelligence (Livros BI)
