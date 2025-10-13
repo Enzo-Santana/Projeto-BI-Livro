@@ -86,7 +86,7 @@ SQL
 04_populate_dimensions.sql  -- Popula as dimensões (inclui lógica SCD Tipo 2 e ETL de Motivo Devolução).
 05_populate_fact.sql        -- Popula a tabela fato_vendas (inclui cálculo de custo, receita e flags de devolução).
 ```
-Validar e Testar
+
 Execute os scripts de validação:
 
 SQL
@@ -146,10 +146,10 @@ MySQL secure-file-priv    ----------    Verifique o diretório permitido (SHOW V
 Erro de Sintaxe no DAX    ----------    Substituir o caractere de multiplicação ∗ (Unicode) pelo asterisco padrão do teclado *.
 Dados Não Atualizam no BI ----------    1. Verifique a conexão com o banco em Configurações de Fonte de Dados; 2. Clique em Home → Atualizar.
 ```
-Exportar para as Planilhas
 Desenvolvedor: Enzo Santana
 Data de Entrega: 13/10/2025
 Versão: 1.0
+
 
 
 
