@@ -43,9 +43,9 @@ Tecnologias   ----	MySQL, Power BI Desktop, Draw.io
 Charset       ----	UTF-8
 Modelo        ----	Star Schema
 
-
-PASSO A PASSO PARA EXECUTAR O PROJETO
 ```
+PASSO A PASSO PARA EXECUTAR O PROJETO
+
 Pré-requisitos:
 
  * MySQL Server instalado e acessível (porta padrão 3306).
@@ -132,23 +132,24 @@ Regras de Qualidade Implementadas
 SUPOSTOS DE AGENDAMENTO (PRODUÇÃO)
 Este é o ciclo de atualização assumido para um ambiente de produção:
 ```
-Horário	Ação	Descrição
-  06:00 AM	Carga Staging----------------Carregamento de novos dados CSV brutos (via LOAD DATA INFILE ou ferramenta).
-  06:30 AM	Atualização Dimensional------Atualização de SCDs e inserção de novos valores em dimensões (CALL sp_atualiza_dimensoes()).
-  07:00 AM	Refresh Fato-----------------Truncamento e reinserção dos dados da fato_vendas (Incremental ou Full, conforme o volume).
-  08:00 AM	Monitoramento----------------Verificação da qualidade de dados pós-carga (via 08_tests_validation.sql).
-  09:00 AM	Refresh Power BI-------------Atualização automática do relatório Power BI Service (via Data Gateway).
+Horário	    Ação	                         Descrição
+06:00 AM	Carga Staging----------------Carregamento de novos dados CSV brutos (via LOAD DATA INFILE ou ferramenta).
+06:30 AM	Atualização Dimensional------Atualização de SCDs e inserção de novos valores em dimensões (CALL sp_atualiza_dimensoes()).
+07:00 AM	Refresh Fato-----------------Truncamento e reinserção dos dados da fato_vendas (Incremental ou Full, conforme o volume).
+08:00 AM	Monitoramento----------------Verificação da qualidade de dados pós-carga (via 08_tests_validation.sql).
+09:00 AM	Refresh Power BI-------------Atualização automática do relatório Power BI Service (via Data Gateway).
 ```
 ```
 SOLUÇÃO DE PROBLEMAS
-Problema			Solução
-MySQL secure-file-priv----------Verifique o diretório permitido (SHOW VARIABLES LIKE 'secure_file_priv';) e mova os CSVs para esse local.
-Erro de Sintaxe no DAX----------Substituir o caractere de multiplicação ∗ (Unicode) pelo asterisco padrão do teclado *.
-Dados Não Atualizam no BI-------1. Verifique a conexão com o banco em Configurações de Fonte de Dados; 2. Clique em Home → Atualizar.
+Problema			                    Solução
+MySQL secure-file-priv    ----------    Verifique o diretório permitido (SHOW VARIABLES LIKE 'secure_file_priv';) e mova os CSVs para esse local.
+Erro de Sintaxe no DAX    ----------    Substituir o caractere de multiplicação ∗ (Unicode) pelo asterisco padrão do teclado *.
+Dados Não Atualizam no BI ----------    1. Verifique a conexão com o banco em Configurações de Fonte de Dados; 2. Clique em Home → Atualizar.
 ```
 Exportar para as Planilhas
 Desenvolvedor: Enzo Santana
 Data de Entrega: 13/10/2025
 Versão: 1.0
+
 
 
