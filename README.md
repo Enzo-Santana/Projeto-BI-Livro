@@ -48,19 +48,7 @@ A modelagem segue o padrão Star Schema, com granularidade no nível de item do 
 
 🌟 Estrutura Dimensional
 
-                +-------------------+
-                |   DIM_CLIENTE     |
-                +-------------------+
-                         |
-                         |
-+-------------+    +-------------+    +-----------------+
-| DIM_PRODUTO |----| FATO_VENDAS |----| DIM_CALENDARIO |
-+-------------+    +-------------+    +-----------------+
-                         |
-                         |
-              +---------------------+
-              |   DIM_LOCALIDADE    |
-              +---------------------+
+<p align="center"> <img src="https://imgur.com/a/wH1G2sP" alt="Modelagem"/> </p>
 
 🔹 Tabela Fato — FATO_VENDAS
 Campo	                 Tipo	           Descrição
