@@ -36,8 +36,8 @@ teste_tecnico/
 ```
 INFORMAÇÕES TÉCNICAS
 
-Item                    Detalhe
-SGBD          ----      MySQL 8.0+
+Item                Detalhe
+SGBD          ----  MySQL 8.0+
 Database      ----	livro_bi
 Tecnologias   ----	MySQL, Power BI Desktop, Draw.io
 Charset       ----	UTF-8
@@ -150,4 +150,5 @@ Exportar para as Planilhas
 Desenvolvedor: Enzo Santana
 Data de Entrega: 13/10/2025
 Versão: 1.0
+
 
