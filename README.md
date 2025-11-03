@@ -11,6 +11,12 @@
 
 ---
 
+## Imagens
+
+<img src="./Print-BI-Livro/Frame 1.png" alt="Código">
+
+<img src="./Print-BI-Livro/image4.png" alt="BI">
+
 ## 🧾 Visão Geral
 
 > Este projeto tem como objetivo desenvolver um **Data Warehouse (DW)** e um **Dashboard analítico em Power BI** para um e-commerce de livros.  
